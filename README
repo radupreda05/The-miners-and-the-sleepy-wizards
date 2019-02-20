@@ -1,0 +1,40 @@
+                        =================================
+                        The miners and the sleepy wizards
+                        =================================
+
+
+  The solution is implemented in Java using threads. The challenge was to
+implement the miners and the communication channel between the miners and the
+wizards and solve the concurrency problems.
+  Let there be Miners and Wizards. The goal of the miners is to explore all the
+tunnels in their cave system. The cave system has many rooms, each with its
+puzzle to solve. The miners can solve the puzzles and with the solutions, the
+wizards can break the magic barriers protecting the cave and gain access to the
+adjacent rooms.
+  The Wizards are not always available, as sometimes they sleep. When a wizard
+is awake, he takes puzzle solutions from the miners, and does wizardly things
+to unlock the paths to all adjacent rooms. If the puzzles are solved
+incorrectly, when the wizard tries to unlock the paths, a great explosion kills
+everyone and ends the program.
+  Each puzzle starts with a random string found on a piece of paper inside the
+room. To solve the puzzle, a miner needs to... well... mine it. To do this the
+miner starts calculating the hash of the hash of the hash of ... of the hash of
+the string. The number of times to repeat the hash operation is fixed and equal
+to N. The miners start outside of the cave, and they know in which room to go
+by getting this information from the wizards. When this happens, the wizards
+also tell the miners what the string that needs to be hashed is.
+  The cave system contains many rooms. There are multiple cave entrances and all
+of them can be accessed at the start. There is no guarantee that any room can be
+reached from any other room using the cave system. However, there is a guarantee
+that all rooms can be reached if all entrances are used. Each room is protected
+by magic that needs to be taken down by the wizard. Once a room is unlocked, the
+adjacent, undiscovered rooms are revealed. One room can be connected with any
+number of rooms.
+  A wizard gets tired fast and when he gets tired he simply sleeps. It is not
+clear what triggers a sleep stage for a wizard, as the time between two sleep
+periods is not fixed and doesn’t seem to be correlated to the number of rooms he
+unlocks. When the wizard is awake, he takes a puzzle solution along with the
+name of the current room as well as the name of the previous room, and unlocks
+the current room. An incorrectly solved puzzle will trigger the explosion. Once
+a barrier is down the wizard gives the list of adjacent rooms to the miners, so
+they can start work on the next puzzles.
