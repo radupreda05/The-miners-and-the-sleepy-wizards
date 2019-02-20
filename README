@@ -38,3 +38,9 @@ name of the current room as well as the name of the previous room, and unlocks
 the current room. An incorrectly solved puzzle will trigger the explosion. Once
 a barrier is down the wizard gives the list of adjacent rooms to the miners, so
 they can start work on the next puzzles.
+  
+  Usage:
+your@Desktop$ make
+your@Desktop$ java Homework ../test_cases/someTestFromThere numberOfHashes numberOfWizards numberOfMiners
+  As an example:
+your@Desktop$ java Homework ../test_cases/test01_data.txt 100000 4 4
